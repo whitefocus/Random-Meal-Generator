@@ -1,0 +1,171 @@
+$main-color: #660708;
+$second-color: #0b090a;
+$text-color: #f5f3f4;
+$alt-color: #e5383b;
+
+.container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  font-size: 1.2rem;
+  overflow: hidden;
+  .recepie {
+    position: relative;
+    padding: 30px;
+    border: 4px solid $second-color;
+    border-radius: 30px;
+    display: flex;
+
+    gap: 3rem;
+    box-shadow: 0 8px 10px 5px rgb(0 0 0 / 35%);
+    animation: fadeInRight 1.5s;
+    img {
+      max-width: 200px;
+      border-radius: 10%;
+      margin-bottom: 30px;
+      border: 4px solid $alt-color;
+    }
+    ul {
+      li {
+        margin-bottom: 5px;
+        font-family: "helvetica";
+        font-size: 1.3rem;
+        font-weight: bold;
+        span {
+          color: $alt-color;
+          font-size: 1.6rem;
+          font-weight: bold;
+          margin-right: 5px;
+        }
+      }
+    }
+    .inst {
+      max-width: 75ch;
+      display: flex;
+      flex-direction: column;
+      font-family: "helvetica";
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .name {
+      font-size: 3rem;
+      color: $alt-color;
+      font-family: "Cookie";
+      margin-bottom: 2.5rem;
+    }
+    .head {
+      color: #8d99ae;
+      font-size: 1.5rem;
+      font-family: "Cafe";
+    }
+    button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      top: 20px;
+      right: 20px;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      font-family: "Cookie";
+      font-size: 2rem;
+      background-color: $alt-color;
+      color: $main-color;
+      box-shadow: 0 7px 13px rgb(0 0 0 / 30%);
+      cursor: pointer;
+    }
+  }
+}
+.next-recipe-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    font-size: 1.2rem;
+    overflow: hidden;
+    .recepie {
+      // position: relative;
+      padding: 30px;
+      border: 4px solid $second-color;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      box-shadow: 0 8px 10px 5px rgb(0 0 0 / 35%);
+
+      animation: fadeInRight 1.5s;
+      img {
+        max-width: 200px;
+        border-radius: 10%;
+        margin-bottom: 30px;
+        border: 4px solid $alt-color;
+      }
+      ul {
+        li {
+          margin-bottom: 5px;
+          font-family: "helvetica";
+          font-size: 1.3rem;
+          font-weight: bold;
+          span {
+            color: $alt-color;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+        }
+      }
+      .inst {
+        max-width: 75ch;
+        display: flex;
+        flex-direction: column;
+        font-family: "helvetica";
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      .name {
+        font-size: 3rem;
+        color: $alt-color;
+        font-family: "Cookie";
+        margin-bottom: 2.5rem;
+      }
+      .head {
+        color: #8d99ae;
+        font-size: 1.5rem;
+        font-family: "Cafe";
+      }
+      .next-recipe {
+        display: none;
+      }
+    }
+  }
+  button.next-recipe-mobile {
+    display: block;
+    position: fixed;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    font-family: "Cookie";
+    font-size: 2rem;
+    background-color: $alt-color;
+    color: $main-color;
+    box-shadow: 0 7px 13px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    z-index: 10;
+  }
+}

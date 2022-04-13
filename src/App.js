@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Header from './components/Header'
+import Recepie from './components/Recepie';
 
 function App() {
+  let [recipe, setResipe] = React.useState(null)
+
+
+  React.useEffect(() => {
+    nextRecipe()
+  }, [])
+    function nextRecipe() {
+      if(recipe){
+        document.querySelector('.recepie').style.animation = 'fadeOut 1s'
+        
+      }
+      setTimeout(() => {
+        setResipe(null)
+        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+      .then(response => response.json())
+      .then(data => setResipe(data['meals'][0]))
+      }, 1000);
+      
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {recipe && <Recepie recipe={recipe} nextRecipe={nextRecipe} />}
     </div>
   );
 }
