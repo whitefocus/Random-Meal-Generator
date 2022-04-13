@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Random-Meal-Generator/static/css/main.cc4ef0f2.css",
+    "main.js": "/Random-Meal-Generator/static/js/main.0612aa3a.js",
+    "static/media/Cafe Francoise_D.otf": "/Random-Meal-Generator/static/media/Cafe Francoise_D.199f8081722487c0837a.otf",
+    "static/media/Cookie-Regular.ttf": "/Random-Meal-Generator/static/media/Cookie-Regular.f7a638e09e95aca4ac87.ttf",
+    "static/media/helvetica-neu.ttf": "/Random-Meal-Generator/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "index.html": "/Random-Meal-Generator/index.html",
+    "main.cc4ef0f2.css.map": "/Random-Meal-Generator/static/css/main.cc4ef0f2.css.map",
+    "main.0612aa3a.js.map": "/Random-Meal-Generator/static/js/main.0612aa3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc4ef0f2.css",
+    "static/js/main.0612aa3a.js"
+  ]
+}
